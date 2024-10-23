@@ -3,22 +3,23 @@
 client_id = "bbae0b2d27e15e0bf21118247540d522"
 name = "test-product-listing-app"
 handle = "test-product-listing-app"
-application_url = "https://active-partnerships-status-younger.trycloudflare.com"
+application_url = "https://shoe-propecia-dish-reach.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "gryshyn-test-store.myshopify.com"
+include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://active-partnerships-status-younger.trycloudflare.com/auth/callback",
-  "https://active-partnerships-status-younger.trycloudflare.com/auth/shopify/callback",
-  "https://active-partnerships-status-younger.trycloudflare.com/api/auth/callback"
+  "https://shoe-propecia-dish-reach.trycloudflare.com/auth/callback",
+  "https://shoe-propecia-dish-reach.trycloudflare.com/auth/shopify/callback",
+  "https://shoe-propecia-dish-reach.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
