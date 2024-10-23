@@ -4,12 +4,13 @@ import {
     useIndexResourceState,
     Text,
     Badge,
-    useBreakpoints,Page,  Card, Thumbnail, Pagination,RangeSlider, PageActions, Button, BlockStack, IndexFilters, IndexFiltersProps, TabProps, useSetIndexFiltersMode, ChoiceList, TextField
+    Page,
+    Thumbnail,
+    Pagination,
   } from '@shopify/polaris';
 import React from 'react';
-import { json } from "@remix-run/node"; // or cloudflare/deno
+import { json } from "@remix-run/node"; 
 import { useNavigate } from "@remix-run/react";
-//import {useMemo} from 'react';
 import shopify from "app/shopify.server";
 import { useLoaderData } from "@remix-run/react";
 import {ArrowDownIcon, ExportIcon, PlusIcon} from '@shopify/polaris-icons';
@@ -44,7 +45,7 @@ export async function loader({ request }) {
             description
             status
             totalInventory
-            collections(first: 5) {  # Fetch up to 5 collections per product
+            collections(first: 5) {  
               edges {
                 node {
                   id
@@ -65,13 +66,11 @@ export async function loader({ request }) {
       }`);
     const parsedResponse = await response.json();
     const products = parsedResponse.data.products.nodes;
-    //console.log(products,)
     const pageInfo = parsedResponse.data.products.pageInfo;
-    console.log(products)
     return json({ products, pageInfo });
   }
 
-function Shopdata() {
+function ListingPage() {
 
       const resourceName = {
         singular: 'product',
@@ -100,9 +99,6 @@ function Shopdata() {
 
       const {selectedResources, allResourcesSelected, handleSelectionChange} =
         useIndexResourceState(products);
-
-            ///////////////////////////////// 
-        
 
     const rowMarkup = products.map(
         ({ images, id, title, description, status, totalInventory, collections }, index) => (
@@ -142,7 +138,6 @@ function Shopdata() {
             }}
         >
             <LegacyCard>
-                
                 <IndexTable
                     resourceName={resourceName}
                     itemCount={2}
@@ -196,4 +191,4 @@ function Shopdata() {
 
 
 
-export default Shopdata;
+export default ListingPage;
