@@ -3,7 +3,7 @@
 client_id = "bbae0b2d27e15e0bf21118247540d522"
 name = "test-product-listing-app"
 handle = "test-product-listing-app"
-application_url = "https://shoe-propecia-dish-reach.trycloudflare.com"
+application_url = "https://navigator-wholesale-colleges-rip.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://shoe-propecia-dish-reach.trycloudflare.com/auth/callback",
-  "https://shoe-propecia-dish-reach.trycloudflare.com/auth/shopify/callback",
-  "https://shoe-propecia-dish-reach.trycloudflare.com/api/auth/callback"
+  "https://navigator-wholesale-colleges-rip.trycloudflare.com/auth/callback",
+  "https://navigator-wholesale-colleges-rip.trycloudflare.com/auth/shopify/callback",
+  "https://navigator-wholesale-colleges-rip.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
